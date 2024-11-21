@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,7 +10,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: '台車アプリ',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 232, 228, 240)),
+        colorScheme: ColorScheme.fromSeed(
+            seedColor: const Color.fromARGB(255, 232, 228, 240)),
         useMaterial3: true,
       ),
       home: BusstopRoute(),
@@ -26,42 +25,42 @@ class BusstopRoute extends StatefulWidget {
 }
 
 class Busstate extends State<BusstopRoute> {
-  String? isSelectedItem = '未選択';
+  String? isSelectedItem1 = '未選択';
   String? isSelectedItem2 = '未選択';
 
   @override
   Widget build(BuildContext context) {
     // 初期の枠線色設定
-    Color borderColor1 = Colors.black;
-    Color borderColor2 = Colors.black;
+    Color borderColor1 = const Color.fromARGB(255, 0, 0, 0);
+    Color borderColor2 = const Color.fromARGB(255, 0, 0, 0);
 
     // ルート選択に基づく条件分岐
-    if (isSelectedItem == '＋ 中央ルート') {
-      borderColor1 = Colors.red;
-    } else if (isSelectedItem == '＋ 南部ルート') {
-      borderColor1 = Colors.yellow;
-    } else if (isSelectedItem == '＋ 西部ルート') {
-      borderColor1 = Colors.blue;
-    } else if (isSelectedItem == '＋ 北部ルート') {
-      borderColor1 = Colors.green;
-    } else if (isSelectedItem == '＋ のんキールート') {
-      borderColor1 = Colors.purple;
-    } else if (isSelectedItem == '× 未選択') {
-      borderColor1 = Colors.grey;
+    if (isSelectedItem1 == '＋ 中央ルート') {
+      borderColor1 = const Color.fromARGB(255, 244, 67, 54);
+    } else if (isSelectedItem1 == '＋ 南部ルート') {
+      borderColor1 = const Color.fromARGB(255, 255, 235, 59);
+    } else if (isSelectedItem1 == '＋ 西部ルート') {
+      borderColor1 = const Color.fromARGB(255, 33, 150, 243);
+    } else if (isSelectedItem1 == '＋ 北部ルート') {
+      borderColor1 = const Color.fromARGB(255, 76, 175, 80);
+    } else if (isSelectedItem1 == '＋ のんキールート') {
+      borderColor1 = const Color.fromARGB(255, 156, 39, 176);
+    } else if (isSelectedItem1 == '× 未選択') {
+      borderColor1 = const Color.fromARGB(255, 158, 158, 158);
     }
 
     if (isSelectedItem2 == '＋ 中央ルート') {
-      borderColor2 = Colors.red;
+      borderColor2 = const Color.fromARGB(255, 244, 67, 54);
     } else if (isSelectedItem2 == '＋ 南部ルート') {
-      borderColor2 = Colors.yellow;
+      borderColor2 = const Color.fromARGB(255, 255, 235, 59);
     } else if (isSelectedItem2 == '＋ 西部ルート') {
-      borderColor2 = Colors.blue;
+      borderColor2 = const Color.fromARGB(255, 33, 150, 243);
     } else if (isSelectedItem2 == '＋ 北部ルート') {
-      borderColor2 = Colors.green;
+      borderColor2 = const Color.fromARGB(255, 76, 175, 80);
     } else if (isSelectedItem2 == '＋ のんキールート') {
-      borderColor2 = Colors.purple;
+      borderColor2 = const Color.fromARGB(255, 156, 39, 176);
     } else if (isSelectedItem2 == '× 未選択') {
-      borderColor2 = Colors.grey;
+      borderColor2 = const Color.fromARGB(255, 158, 158, 158);
     }
 
     return Scaffold(
@@ -150,10 +149,10 @@ class Busstate extends State<BusstopRoute> {
                       ],
                       onChanged: (String? value) {
                         setState(() {
-                          isSelectedItem = value;
+                          isSelectedItem1 = value;
                         });
                       },
-                      value: isSelectedItem,
+                      value: isSelectedItem1,
                     ),
                   ),
                   SizedBox(width: 50),
@@ -202,8 +201,7 @@ class Busstate extends State<BusstopRoute> {
                       onChanged: (String? value) {
                         setState(() {
                           isSelectedItem2 = value;
-                        }
-                        );
+                        });
                       },
                       value: isSelectedItem2,
                     ),
