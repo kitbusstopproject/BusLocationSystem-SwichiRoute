@@ -72,7 +72,7 @@ class Busstate extends State<BusstopRoute> {
         padding: const EdgeInsets.all(80.0),
         child: Center(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
                 '台車で走るルートを選択してください',
@@ -111,7 +111,7 @@ class Busstate extends State<BusstopRoute> {
                     decoration: BoxDecoration(
                       border: Border.all(
                         color: borderColor1, // 1台目の色
-                        width: 2,
+                        width: 3,
                       ),
                       borderRadius: BorderRadius.circular(8),
                     ),
@@ -162,7 +162,7 @@ class Busstate extends State<BusstopRoute> {
                     decoration: BoxDecoration(
                       border: Border.all(
                         color: borderColor2, // 2台目の色
-                        width: 2,
+                        width: 3,
                       ),
                       borderRadius: BorderRadius.circular(8),
                     ),
